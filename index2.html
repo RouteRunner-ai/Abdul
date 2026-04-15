@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Chatbot Assistant</title>
+  <style>
+    /* Simple page styling — clean background, centers a greeting, ensures chatbot stands out */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f4f7fb 0%, #e9eef4 100%);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 540px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      padding: 2rem 2rem 2rem 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.02);
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      background: linear-gradient(120deg, #1a2a4f, #2d4379);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: #2c3e4e;
+      line-height: 1.5;
+      font-weight: 450;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      border-radius: 40px;
+      padding: 0.3rem 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1f3a6b;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 1rem;
+      color: #5a6e85;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="content">
+  <div class="card">
+    <h1>🤖 AI Assistant</h1>
+    <p>Your intelligent chatbot is ready to help.<br>Click the chat bubble to start a conversation.</p>
+    <div class="badge">✨ Powered by Jotform AI Agents</div>
+  </div>
+</div>
+
+<footer>
+  <span>Smart assistant • available 24/7</span>
+</footer>
+
+<!-- CHATBOT SCRIPT — placed exactly inside body as requested -->
+<script src='https://cdn.jotfor.ms/agent/embedjs/019d4791d6b37276b496acd0b02aa1a8fad9/embed.js'></script>
+
+<!-- Optional: small indicator to confirm script loaded (no interference) -->
+<script>
+  (function() {
+    // Simple console log to verify script context — the chatbot will self-initialize.
+    console.log('Jotform chatbot embed script loaded from CDN.');
+    // The widget automatically injects the floating chat button.
+  })();
+</script>
+
+</body>
+</html>
