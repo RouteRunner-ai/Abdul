@@ -2,19 +2,36 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <style>
+        /* Make important elements sticky within the embed */
+        .sticky-header, .sticky-button {
+            position: sticky;
+            top: 10px; /* Adjust this value as needed */
+            background-color: white; /* Prevents content from showing through */
+            z-index: 100;
+        }
+        
+        /* Or target a specific container */
+        .sticky-container {
+            position: sticky;
+            top: 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Your embed content -->
-    <script>
-        (function(w, d) {
-            w.CollectId = "69de7d9a92f50c4b01723a87";
-            var h = d.head || d.getElementsByTagName("head")[0];
-            var s = d.createElement("script");
-            s.setAttribute("type", "text/javascript");
-            s.async = true;
-            s.setAttribute("src", "https://collectcdn.com/launcher.js");
-            h.appendChild(s);
-        })(window, document);
-    </script>
+    <div class="sticky-container">
+        <!-- Your Collect widget script goes here -->
+        <script>
+            (function(w, d) {
+                w.CollectId = "69de7d9a92f50c4b01723a87";
+                var h = d.head || d.getElementsByTagName("head")[0];
+                var s = d.createElement("script");
+                s.setAttribute("type", "text/javascript");
+                s.async = true;
+                s.setAttribute("src", "https://collectcdn.com/launcher.js");
+                h.appendChild(s);
+            })(window, document);
+        </script>
+    </div>
 </body>
 </html>
